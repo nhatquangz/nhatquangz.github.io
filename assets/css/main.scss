@@ -3,6 +3,20 @@
 ---
 
 @charset "utf-8";
-
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+// Custom
+.archive__item-title a {
+    text-decoration: none;
+}
+
+.page__content {
+  font-family: $global-font-family;
+  font-size: $type-size-5;
+  line-height: 1.8;
+}
+
+.page__title {
+    line-height: 1.3;
+}
