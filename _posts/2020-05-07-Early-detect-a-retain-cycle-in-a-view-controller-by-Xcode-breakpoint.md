@@ -1,5 +1,6 @@
 ---
 title: Early detect a retain cycle in a view controller by Xcode breakpoint
+toc: true
 ---
 ## Memory Leak
 
