@@ -1,7 +1,6 @@
 ---
 title: Early detect a retain cycle in a view controller by Xcode breakpoint
 ---
-
 ## Memory Leak
 
 A memory leak occurs when a given memory space can't be recovered by the ARC ([Automatic Reference Count](https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html)) because it is unable to know whether this memory space is actually in use or not. A common result of leaking memory in iOS is dismissed viewcontrollers are still not be released. And many iOS developers come up with this in viewcontroller:
@@ -16,7 +15,7 @@ deinit {
 
 ## Detecting memory leaks
 
-Apple offers a powerfull tools for debugging memory leaks like **Instrument** or **Memory Graph Debugger.** But when you should use these sophisticated tools?
+Apple offers some powerfull tools for debugging memory leaks like **Instrument** or **Memory Graph Debugger.** But when you should use these sophisticated tools?
 
 There is a very nice tip from [Cédric Luthi](https://twitter.com/0xced/status/900692839557992449) that I want to share with you today. It can tell you when you need to stop to check carefully your code and debug memory leaks. He uses **Symbolic Breakpoint** to detect view controllers not being deallocated. The same concept as the print function in `deinit`, but a lot cleaner. You don't populate your code with print this way.
 
