@@ -63,7 +63,7 @@ struct EvenValue {
 }
 
 struct Foo {
-	@EvenValue var evenValue: Int = 0
+    @EvenValue var evenValue: Int = 0
 }
 
 var f = Foo()

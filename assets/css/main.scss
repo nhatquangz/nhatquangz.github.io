@@ -78,20 +78,58 @@ $ubuntu: "Ubuntu", Arial, sans-serif !default;
     width: 100%;
     @include breakpoint($large) {
       padding-left: 0;
+      padding-right: 0;
     }
 
     @include breakpoint($x-large) {
       padding-left: 0;
+      padding-right: 0;
     }
   }
 
   .page__related {
     @include breakpoint($large) {
       padding-left: 0;
+      padding-right: 0;
     }
 
     @include breakpoint($x-large) {
       padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.archive {
+  margin-top: 1em;
+  margin-bottom: 2em;
+
+  @include breakpoint($large) {
+    float: right;
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-right: 0;
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+    padding-right: 0;
+  }
+}
+
+
+.wide_with_author {
+  .page {
+    float: right;
+    width: 100%;
+    @include breakpoint($large) {
+      float: right;
+      width: calc(100% - #{$right-sidebar-width-narrow});
+      padding-right: 0;
+    }
+
+    @include breakpoint($x-large) {
+      width: calc(100% - #{$right-sidebar-width});
+      padding-right: 0;
     }
   }
 }
