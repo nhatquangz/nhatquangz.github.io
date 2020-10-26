@@ -9,7 +9,7 @@ Swift 5.1’s *property wrappers* feature can be incredibly useful, as it enab
 
 ## How Property Wrappers work
 
-Let's start with a simple example to have better understand property wrappers and which problems do they resolve. Say, we want to create a interger property that only accepts even values assigned to it. We have something like this:
+Let's start with a simple example to have better understand property wrappers and which problems do they resolve. Say, we want to create an interger property that only accepts even values assigned to it. We have something like this:
 
 ```swift
 struct Foo {
@@ -59,21 +59,21 @@ More better, the logic is reused. But we still have to write repeatedly `get` an
 ```swift
 @propertyWrapper
 struct EvenValue {
-	// The rest of the code is unchanged
+// The rest of the code is unchanged
 }
 
 struct Foo {
-		@EvenValue var evenValue: Int = 0
+	@EvenValue var evenValue: Int = 0
 }
 
 var f = Foo()
-print(f.evenValue) // 0
+print(f.evenValue) // print: 0
 
 f.evenValue = 2
-print(f.evenValue) // 2
+print(f.evenValue) // print: 2
 
 f.evenValue = 3
-print(f.evenValue) // 2
+print(f.evenValue) // print: 2
 ```
 
 The attribute `@EvenValue` is a syntactic sugar, which hides the previous version of our code.
@@ -89,7 +89,7 @@ struct Wrapper<T> {
 }
 ```
 
-We can now use the attribute @Wrapper at the property declaration site:
+We can now use the attribute `@Wrapper` at the property declaration site:
 
 ```swift
 struct Foo {
