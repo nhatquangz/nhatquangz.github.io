@@ -29,18 +29,22 @@ $ubuntu: "Ubuntu", Arial, sans-serif !default;
 .page__content {
   font-family: $global-font-family;
   font-size: $type-size-5;
-  line-height: 1.8;
+  line-height: 1.9em;
 
-  dl,p,li {
-    font-size: 1.1em;
-  }
+  // dl,p,li {
+  //   font-size: 1.1em;
+  // }
 }
 
 .page__title {
-    line-height: 1.3em;
-    h1 {
-      font-size: 1.3em;
-    }
+    line-height: 1.5em;
+    // h1 {
+    //   font-size: 1.3em;
+    // }
+}
+
+.page__meta {
+  margin-top: 0em;
 }
 
 .highlighter-rouge {

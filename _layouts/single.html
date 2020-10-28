@@ -35,6 +35,9 @@ layout: default
           {% if page.read_time %}
             <i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
+          <div class="page__meta">
+            {% include page__taxonomy.html %}
+          </div>
         </header>
       {% endunless %}
 
@@ -55,7 +58,7 @@ layout: default
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
-        {% include page__taxonomy.html %}
+        {% comment %} {% include page__taxonomy.html %} {% endcomment %}
         {% comment %} {% include page__date.html %} {% endcomment %}
       </footer>
 
