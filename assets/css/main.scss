@@ -18,13 +18,13 @@ $ubuntu: "Ubuntu", Arial, sans-serif !default;
   margin-top: 0.7em;
   font-family: $ubuntu;
   font-weight: 400;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .archive__item .page__meta {
     font-family: $ubuntu;
     font-weight: 400;
-    font-size: 0.7em;
+    // font-size: 0.7em;
 }
 
 .page__content {
@@ -48,13 +48,19 @@ $ubuntu: "Ubuntu", Arial, sans-serif !default;
   margin-top: 0em;
 }
 
+.list__item {
+  .page__meta {
+    font-size: initial;
+  }
+}
+
 .highlighter-rouge {
     color: #4e91a5;
     background-color: #4e91a524;
 }
 
 .sidebar {
-  font-size: 0.85em;
+  // font-size: 0.85em;
 }
 
 .sidebar .author__name {
@@ -137,4 +143,26 @@ $ubuntu: "Ubuntu", Arial, sans-serif !default;
       padding-right: 0;
     }
   }
+}
+
+html {
+  /* apply a natural box layout model to all elements */
+  box-sizing: border-box;
+  background-color: $background-color;
+  font-size: 19px;
+
+  @include breakpoint($medium) {
+    font-size: 20px;
+  }
+
+  @include breakpoint($large) {
+    font-size: 21.5px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 21px;
+  }
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
