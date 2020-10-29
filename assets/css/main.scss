@@ -60,7 +60,9 @@ $ubuntu: "Ubuntu", Arial, sans-serif !default;
 }
 
 .sidebar {
-  // font-size: 0.85em;
+  @include breakpoint(max-width $large) {
+    display: none;
+  }
 }
 
 .sidebar .author__name {
@@ -79,6 +81,9 @@ $ubuntu: "Ubuntu", Arial, sans-serif !default;
   .masthead__menu-item,
   .site-subtitle {
     font-weight: 400;
+  }
+  a {
+    margin: 0 0.5em;
   }
 }
 
