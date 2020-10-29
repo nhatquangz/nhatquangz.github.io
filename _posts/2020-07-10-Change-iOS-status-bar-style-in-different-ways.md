@@ -1,6 +1,7 @@
 ---
 title: Change iOS status bar style in different ways
 date: 2020-07-10
+topimage: /assets/images/posts/ios-statusbar.png
 ---
 
 In iOS, there are many ways to change status bar style (light or dark). In this article, we'll go through these ways.

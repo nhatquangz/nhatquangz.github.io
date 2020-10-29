@@ -1,7 +1,10 @@
 ---
 title: Early detect a retain cycle in a view controller by Xcode breakpoint
+excerpt: A common result of leaking memory in iOS is dismissed view controllers are still not be released
 toc: false
+topimage: https://source.unsplash.com/91LGCVN5SAI/900x450
 ---
+
 ## Memory Leak
 
 A memory leak occurs when a given memory space can't be recovered by the ARC ([Automatic Reference Count](https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html)) because it is unable to know whether this memory space is actually in use or not. A common result of leaking memory in iOS is dismissed viewcontrollers are still not be released. And many iOS developers come up with this in viewcontroller:

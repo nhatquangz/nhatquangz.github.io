@@ -1,6 +1,9 @@
 ---
 title: Property Wrapper in Swift 5.1
+excerpt: A property wrapper adds a layer of separation between code that manages how a property is stored and the code that defines a property.
+topimage: https://source.unsplash.com/GopRYASfsOc/900x450
 ---
+
 When working with SwiftUI, you may encounter some new attributes such as `@State` , `@StateObject` or `@ObservedObject`... These are **[property wappers](https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID617)**, a new feature comes with Swift 5.1. 
 
 >A property wrapper adds a layer of separation between code that manages how a property is stored and the code that defines a property. 
