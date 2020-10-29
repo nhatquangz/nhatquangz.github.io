@@ -11,18 +11,18 @@ $ubuntu: "Ubuntu", Arial, sans-serif !default;
 // Custom
 .archive__item-title a {
     text-decoration: none;
-    font-family: $ubuntu;
+    // font-family: $ubuntu;
 }
 
 .archive__item-excerpt {
   margin-top: 0.7em;
-  font-family: $ubuntu;
+  // font-family: $ubuntu;
   font-weight: 400;
   font-size: 0.9em;
 }
 
 .archive__item .page__meta {
-    font-family: $ubuntu;
+    // font-family: $ubuntu;
     font-weight: 400;
     // font-size: 0.7em;
 }
