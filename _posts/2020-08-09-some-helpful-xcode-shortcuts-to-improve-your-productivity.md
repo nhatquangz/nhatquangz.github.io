@@ -1,5 +1,5 @@
 ---
-title: Some handy Xcode shotcuts to improve your productivity
+title: Some handy Xcode shortcuts to improve your productivity
 excerpt: As developers, we spend most of our time in our IDE, so it’s worth becoming an expert in using it.
 topimage: https://source.unsplash.com/TZj-urJKRao/900x450
 ---
@@ -19,7 +19,7 @@ We’ll walk through some Xcode keyboard shortcuts that I found useful. I hope t
 
 In Xcode, we spend most of our time using the editor, writing code. Therefore, knowing a few common keyboard shortcuts while writing and editing the code just makes sense.
 
-### Code Completion (**⌃ + Space)**
+### Code Completion (⌃ + Space)
 
 I always appreciate IDEs with a strong code completion feature. It makes us work more faster and feel comfortable as we don't have to remember exactly a lot of long function's names. You know Apple always prefers not to abbreviate function's names to make their framework more clean and easily  understandable. It’s hard to imagine working without code completion.
 
@@ -33,13 +33,13 @@ When you want to move single lines or entire blocks around in your code, you can
 
 ![Xcode Move Line][xcode-move-line]
 
-### Create description of function (**⌘ + ⌥ + /)**
+### Create description of function (⌘ + ⌥ + /)
 
 We can use **`⌘ + /`** to comment a bunch of lines in your code. But you may not know that you can use **`⌘ + ⌥ + /`** to create function's description, very useful to document your code.
 
 ![XCode function description][function-description]
 
-### Balance Indentation (**⌃ + I)**
+### Balance Indentation (⌃ + I)
 
 Another useful keyboard shortcut to help you keep your code clean and neatly formatted. You can select a block to format or quickly format all your code by **`⌘ + A`** then **`⌃ + I`.**
 
@@ -49,7 +49,7 @@ Another useful keyboard shortcut to help you keep your code clean and neatly for
 
 Knowing how to navigate inside Xcode effectively will help you easily switch contexts. It can also allow you to find what you are searching for without having to check for it manually.
 
-### Open Quickly (**⇧ + ⌘ + O)**
+### Open Quickly (⇧ + ⌘ + O)
 
 Most of IDEs have this functions, I use it most frequently, all the time. **Open quickly** allows you to quickly jump into any source location in your project / workspace. Just start typing the name of any class, interface, function, method, enum, … in your project.
 
@@ -61,13 +61,13 @@ Xcode tracks your entire movement history as soon as you open or create a projec
 
 ![XCode Move Back and Forth][move-back-forth]
 
-### Reveal in Project Navigator (**⇧ + ⌘ + J**)
+### Reveal in Project Navigator (⇧ + ⌘ + J)
 
 When your project get larger, you have a lot of folders and files opened and sometime you may be lost in Project Navigator. **`⇧ + ⌘ + J`** can help you immediately focus on current file in project navigator.
 
 ![Reveal in Project Navigator][reveal-project-navigator]
 
-### Searching **⇧ + ⌘ + F**
+### Searching (⇧ + ⌘ + F)
 
 You can use **Open Quickly** feature to search files / functions, but sometime you need to search some text in entire your project. **`⇧ + ⌘ + F`** will bring you to Find navigator.
 
@@ -75,9 +75,9 @@ You can use **Open Quickly** feature to search files / functions, but sometime y
 
 ## Conclusion
 
-It could at first seems a little daunting to master the keyboard shortcuts. But it's worth to learn and once you've got it, you will find yourself using theme without thinking about it. If you want more other shortcuts, you can open K**ey Bindings** menu and discover yourself.
+It could at first seems a little daunting to master the keyboard shortcuts. But it's worth to learn and once you've got it, you will find yourself using theme without thinking about it. If you want more other shortcuts, you can open **Key Bindings** menu and discover yourself.
 
-XCode —> Preferences —> Key Bindings
+XCode → Preferences → Key Bindings
 
 ![Key Bindings][key-bindings]
 
