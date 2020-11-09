@@ -51,9 +51,9 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : lunr # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Quang La"
   avatar           : "/assets/images/avatar-500.png"
-  bio              : "\"Work hard in silence, let your success be your noise.\" <br>--- <cite>Frank Ocean</cite>"
+  bio              : "Hi, I'm Quang — an iOS developer. On this blog I will share my learning, tip and tricks, tools, and problems I found along the way."
   location         : "Manchester, UK"
   # email            : "nguyennhatquang.la@gmail.com"
   links:
@@ -127,9 +127,14 @@ footer:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
-    - label: "GitHub"
+    - label: "nhatquangz"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/nhatquangz"
+
+    - label: "QuangLa"
+      icon: "fab fa-linkedin-in"
+      url: "https://www.linkedin.com/in/nhatquangz/"
+
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -207,7 +212,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 4 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 

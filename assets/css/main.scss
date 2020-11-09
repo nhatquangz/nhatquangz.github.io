@@ -31,6 +31,12 @@ h2 {
     // font-size: 0.7em;
 }
 
+.search-content {
+  .archive__item {
+    width: 100%;
+  }
+}
+
 .page__content {
   font-family: $global-font-family;
   font-size: $type-size-5;
