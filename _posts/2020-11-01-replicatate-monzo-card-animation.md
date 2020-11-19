@@ -12,7 +12,7 @@ It is a very nice animation of main credit card (red one) and pots which are car
 ![monzo-card-animation][monzo-card-animation]
 
 ## Custom collection view layout
-The series of cards is actually a horizontal scroll direction collection view. And we also need a custom `UICollectionViewFlowLayout` to archive these animation. In this article, I assume you are familiar with `UICollectionView` and I will skip the code that create and configure collection view to focus on the custom collection view flow layout. You can find full code at [Github-MonzoCardAnimation](https://github.com/nhatquangz/monzo-card-animation)
+The series of cards is actually a horizontal scroll direction collection view. And we also need a custom `UICollectionViewFlowLayout` to achieve these animation. In this article, I assume you are familiar with `UICollectionView` and I will skip the code that create and configure collection view to focus on the custom collection view flow layout. You can find full code at [Github-MonzoCardAnimation](https://github.com/nhatquangz/monzo-card-animation)
 
 Firstly we create `MonzoCollectionViewLayout` as a subclass of `UICollectionViewFlowLayout` and set this layout to our collection view.
 
@@ -28,7 +28,7 @@ class MonzoCollectionViewLayout: UICollectionViewFlowLayout {
 }
 ```
 
-I have created basic collection view having 10 cards with different colors. As yet we do nothing with the custom layout, this is how it looks like:
+I have created a basic collection view having 10 cards with different colors. As yet we do nothing with the custom layout, this is how it looks like:
 ![initial-card][initial-card]
 
 Next step, we will override method [`layoutAttributesForElements`](https://developer.apple.com/documentation/uikit/uicollectionviewlayout/1617769-layoutattributesforelements) to implement some changes.
@@ -65,12 +65,12 @@ class MonzoCollectionViewLayout: UICollectionViewFlowLayout {
 
 1. We create a variable to save all collection view attributes. 
 2. `shouldInvalidateLayout` function return `true` to update the layout changes of main card (the first one).
-3. `layoutAttributesForElements` function is where you return the layout attributes for all items inside the given rectangle. Many complicated collection view layout require us to calculate manually size and position attributes, but in this case we do not have to do that. We just take all attributes that have already been calculated by the parent class `super.layoutAttributesForElements(in: rect)` and do a little changes for the attribute of first item (main card).
-4. We can not change these attributes directly, so we create a copy save to `allAttributes` variable. We set `zIndex` of first item to 0 to make sure that it will stay under the other cards.
+3. `layoutAttributesForElements` function is where you return the layout attributes for all items inside the given rectangle. Many complicated collection view layout require us to calculate manually size and position attributes, but in this case we do not have to do that. We just take all attributes that have already been calculated by the parent class `super.layoutAttributesForElements(in: rect)` and do a little changes in the attribute of first item (main card).
+4. We can not change these attributes directly, so we create a copy then save to `allAttributes` variable. Set `zIndex` of first item to 0 to make sure that it will stay under the other cards.
 5. `stickMainCard` function is used to update the position of first item according to changes of scroll view.
-6. Return any attributes with frames that intersect with the `rect`, in other words we return all visiable attributes.
+6. Return any attributes with frames that intersect with the `rect`, in other words we return all visible attributes.
 
-`stickMainCard` function will be in charge of update the main card position according to scroll flow.
+`stickMainCard` function will be in charge of updating the main card position according to scroll flow.
 
 ```swift
 func stickMainCard() {
@@ -109,13 +109,13 @@ func stickMainCard() {
 }
 ```
 
-1. Some variable which is used to calculate the position of item. dX, dY have negative value as we want move the item in the opposite its axis.
+1. Create some variables which are used to calculate the position of item. dX, dY have negative value as we want to move the item in the opposite its axis.
 2. `contentOffsetX` tell us how much distance we have scrolled and we will update the position according to this value. The animation is: the item changes its position when `contentOffsetX` changes and it reaches its threshold (dX, dY) when `contentOffsetX >= itemWidth`. 
 3. Set item Y axis to the calculated value. Condition `contenOffsetX > 0` make sure that content is being scrolled from right to left (collectionview is not in bounding state).
 4. Set item X axis. We can set directly item Y to calculated value as it does not change while scrolling, however for X axis we set `newX`value plus `contentOffetX` to keep the item in screen. When scrolling, you feel it does not change, but it is acctully moving along with scrollview's content.<br>
 When reaching the last item, we want our card move along with the item before the last one. So we get `max` value which is the position of that item and update the card this value when `contentOffsetX + newX` exceed `max - 10`.(10 means that we want the left edge of our card stick a little before)
 
-The last step we need to do is to make cards automatically scroll to center. We will override `targetContentOffset` function in the custom layout class `MonzoCollectionViewLayout` and return the offset that we expect. In this case, we will take the nearest card to center. To know which is the nearest card, we collect all visiable attributes and make a comparison to get the smallest value.
+The last step we need to do is to make cards automatically scroll to center. We will override `targetContentOffset` function in the custom layout class `MonzoCollectionViewLayout` and return the offset we expect. In this case, we will take the nearest card to center. To know which is the nearest card, we collect all visiable attributes and make a comparison to get the smallest value.
 
 ```swift
 override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {

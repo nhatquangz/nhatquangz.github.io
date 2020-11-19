@@ -283,6 +283,6 @@ defaults:
       read_time: false
       comments: # true
       share: true
-      related: false
+      related: true
       toc: false
       classes: wide2

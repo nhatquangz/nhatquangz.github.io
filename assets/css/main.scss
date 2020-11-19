@@ -114,6 +114,7 @@ h2 {
   }
 
   .page__related {
+    width: 100%;
     @include breakpoint($large) {
       padding-left: 0;
       padding-right: 0;
