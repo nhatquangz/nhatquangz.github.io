@@ -112,10 +112,10 @@ func stickMainCard() {
 1. Create some variables which are used to calculate the position of item. dX, dY have negative value as we want to move the item in the opposite its axis.
 2. `contentOffsetX` tell us how much distance we have scrolled and we will update the position according to this value. The animation is: the item changes its position when `contentOffsetX` changes and it reaches its threshold (dX, dY) when `contentOffsetX >= itemWidth`. 
 3. Set item Y axis to the calculated value. Condition `contenOffsetX > 0` make sure that content is being scrolled from right to left (collectionview is not in bounding state).
-4. Set item X axis. We can set directly item Y to calculated value as it does not change while scrolling, however for X axis we set `newX`value plus `contentOffetX` to keep the item in screen. When scrolling, you feel it does not change, but it is acctully moving along with scrollview's content.<br>
+4. Set item X axis. We can set directly item Y to calculated value as it does not change while scrolling, however for X axis we set `newX`value plus `contentOffetX` to keep the item in screen. When scrolling, you feel it does not change, but it is actually moving along with scrollview's content.<br>
 When reaching the last item, we want our card move along with the item before the last one. So we get `max` value which is the position of that item and update the card this value when `contentOffsetX + newX` exceed `max - 10`.(10 means that we want the left edge of our card stick a little before)
 
-The last step we need to do is to make cards automatically scroll to center. We will override `targetContentOffset` function in the custom layout class `MonzoCollectionViewLayout` and return the offset we expect. In this case, we will take the nearest card to center. To know which is the nearest card, we collect all visiable attributes and make a comparison to get the smallest value.
+The last step we need to do is to make cards automatically scroll to center. We will override `targetContentOffset` function in the custom layout class `MonzoCollectionViewLayout` and return the offset we expect. In this case, we will take the nearest card to center. To know which is the nearest card, we collect all visible attributes and make a comparison to get the smallest value.
 
 ```swift
 override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
